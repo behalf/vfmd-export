@@ -149,7 +149,7 @@ function update() {
 }
 
 function lineCount() {
-  return textTyped1.length;;
+  return textTyped1.length;
 }
 
 /*------------------------------------------------------------------*/
@@ -160,8 +160,6 @@ function drawCharacter(_font, _char, _x, _y) {
 }
 
 function draw() {
-  fill(random(255));
-  rect(100, 100, 100, 100);
   var currentLetter = 0;
 
   // draw letters
@@ -173,6 +171,10 @@ function draw() {
     // line coordinate
     x = startX;
     y = startY + (textHeight * line);
+
+
+  fill(random(255));
+  rect(100, 100, 100, 100);
 
     // draw a baseline
     stroke(0);
