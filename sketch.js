@@ -131,6 +131,8 @@ function setup() {
   updateButton = createButton("UPDATE");
   updateButton.position(lineHeightInput.x + lineHeightInput.width, preloadedStringInput.y);
   updateButton.mousePressed(update);
+
+  update();
 }
 
 function update() {
