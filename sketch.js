@@ -69,7 +69,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight, SVG);
   pixelDensity(1);
   smooth();
-  noLoop();
+
+  initializeText();
 
   imageMode(CENTER);
   rectMode(CORNER);
