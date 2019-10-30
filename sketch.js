@@ -121,7 +121,7 @@ function setup() {
   availableRegionHeight = height - (margin * 2);
 
   // input
-  preloadedStringInput = createInput("HANOI");
+  preloadedStringInput = createInput("hanoi");
   preloadedStringInput.position(margin, windowHeight - margin);
 
   fontSizeInput = createInput("100");
@@ -144,6 +144,7 @@ function update() {
 
   preloadString(preloadedString);
 
+  clear();
   redraw();
 }
 
@@ -622,6 +623,7 @@ function keyPressed(){
     save();
   }
 
+  /*
   if (keyCode === DELETE || keyCode === BACKSPACE || keyCode === LEFT_ARROW) {
     popCharacter();
   }
@@ -639,23 +641,8 @@ function keyPressed(){
   if (keyCode === RIGHT_ARROW) {
     pushCharacter(" ");
   }
+  */
 
-  // redraw
-  clear();
-  redraw();
-}
-
-// runs when a key is pressed
-function keyTyped() {
-  // convert uppercase to lowercase (if any)
-  var letter = key.toLowerCase();
-
-  // check if key is included in the available letter set
-  var isValid = charsA.includes(letter) || charsB.includes(letter) || charsC.includes(letter);
-  if (isValid) {
-    pushCharacter(letter);
-  }
-  
   // redraw
   clear();
   redraw();
