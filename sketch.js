@@ -184,17 +184,17 @@ function draw() {
     for (var i = 0; i < currentLine1.length; i++) {
       // layer 3
       fill(colors3[currentLetter]);
-      rect(10, 10, x, y);
+      rect(x, y, 10, 10);
       drawCharacter(font3, currentLine3[i], x, y);
 
       // layer 1
       fill(colors1[currentLetter]);
-      rect(10, 10, x, y);
+      rect(x, y, 10, 10);
       drawCharacter(font1, currentLine1[i], x, y);
 
       // layer 2
       fill(colors2[currentLetter]);
-      rect(10, 10, x, y);
+      rect(x, y, 10, 10);
       drawCharacter(font2, currentLine2[i], x, y);
 
       currentLetter++;
