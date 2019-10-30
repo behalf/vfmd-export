@@ -172,10 +172,6 @@ function draw() {
     x = startX;
     y = startY + (textHeight * line);
 
-
-  fill(random(255));
-  rect(100, 100, 100, 100);
-
     // draw a baseline
     stroke(255,0,0);
     // line(startX, y, windowWidth - startX, y);
@@ -185,14 +181,17 @@ function draw() {
     for (var i = 0; i < currentLine1.length; i++) {
       // layer 3
       fill(colors3[currentLetter]);
+      rect(10, 10, x, y);
       drawCharacter(font3, currentLine3[i], x, y);
 
       // layer 1
       fill(colors1[currentLetter]);
+      rect(10, 10, x, y);
       drawCharacter(font1, currentLine1[i], x, y);
 
       // layer 2
       fill(colors2[currentLetter]);
+      rect(10, 10, x, y);
       drawCharacter(font2, currentLine2[i], x, y);
 
       currentLetter++;
