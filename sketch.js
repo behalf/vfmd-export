@@ -114,12 +114,6 @@ function setup() {
   // margin border
   margin = 50;
 
-  startX = margin;
-  startY = margin + fontSize * 0.72;
-
-  availableRegionWidth = windowWidth - (margin * 2);
-  availableRegionHeight = windowHeight - (margin * 2);
-
   // input
   preloadedStringInput = createInput("hanoi");
   preloadedStringInput.position(margin, windowHeight - margin);
@@ -141,6 +135,12 @@ function update() {
   preloadedString = preloadedStringInput.value();
   fontSize = float(fontSizeInput.value());
   textHeight = float(lineHeightInput.value());
+
+  startX = margin;
+  startY = margin + fontSize * 0.72;
+
+  availableRegionWidth = windowWidth - (margin * 2);
+  availableRegionHeight = windowHeight - (margin * 2);
 
   preloadString(preloadedString);
 
