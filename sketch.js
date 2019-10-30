@@ -132,8 +132,6 @@ function setup() {
   updateButton = createButton("UPDATE");
   updateButton.position(lineHeightInput.x + lineHeightInput.width, preloadedStringInput.y);
   updateButton.mousePressed(update);
-
-  update();
 }
 
 function update() {
@@ -199,6 +197,8 @@ function draw() {
       x += textWidth(currentLine1[i]);
     }
   }
+
+  print(textTyped1);
 }
 
 /*------------------------------------------------------------------*/
@@ -417,9 +417,6 @@ function pickColors(_uni1, _uni2) {
 
     iteration++;
   }
-
-  print(difference(usedColorsAmount));
-  print(usedColorsAmount);
 }
 
 function checkColors(_color1, _color2, _color3, _hue1, _hue2, _hue3, _value1, _value2, _value3) {
