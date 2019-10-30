@@ -60,6 +60,8 @@ function initializeText() {
 }
 
 function preloadString(_preloadedString) {
+  _preloadedString = _preloadedString.toLowerCase();
+
   for (var i = 0; i < _preloadedString.length; i++) {
     pushCharacter(_preloadedString[i]);
   }
