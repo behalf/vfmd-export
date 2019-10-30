@@ -123,13 +123,13 @@ function setup() {
   preloadedStringInput.position(margin, windowHeight - margin);
 
   fontSizeInput = createInput("100");
-  fontSizeInput.position(preloadedStringInput.x + preloadedStringInput.width + 50, preloadedStringInput.y);
+  fontSizeInput.position(preloadedStringInput.x + preloadedStringInput.width, preloadedStringInput.y);
 
   lineHeightInput = createInput("120");
-  fontSizeInput.position(fontSizeInput.x + fontSizeInput.width + 50, preloadedStringInput.y);
+  fontSizeInput.position(fontSizeInput.x + fontSizeInput.width, preloadedStringInput.y);
 
   updateButton = createButton("UPDATE");
-  updateButton.position(lineHeightInput.x + lineHeightInput.width + 50, preloadedStringInput.y);
+  updateButton.position(lineHeightInput.x + lineHeightInput.width, preloadedStringInput.y);
   updateButton.mousePressed(update);
 }
 
