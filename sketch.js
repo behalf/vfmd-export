@@ -621,6 +621,10 @@ function popCharacter() {
 function keyPressed(){
   if (keyCode === TAB) {
     save();
+
+    // redraw
+    clear();
+    redraw();
   }
 
   /*
@@ -642,8 +646,4 @@ function keyPressed(){
     pushCharacter(" ");
   }
   */
-
-  // redraw
-  clear();
-  redraw();
 }
