@@ -139,8 +139,8 @@ function update() {
   initializeText();
 
   preloadedString = preloadedStringInput.value();
-  fontSize = fontSizeInput.value();
-  textHeight = lineHeightInput.value();
+  fontSize = float(fontSizeInput.value());
+  textHeight = float(lineHeightInput.value());
 
   preloadString(preloadedString);
 
@@ -161,6 +161,9 @@ function drawCharacter(_font, _char, _x, _y) {
 
 function draw() {
   var currentLetter = 0;
+
+  print(fontSize);
+  print(textHeight);
 
   // draw letters
   for (var line = 0; line < lineCount(); line++) {
@@ -200,8 +203,6 @@ function draw() {
       x += textWidth(currentLine1[i]);
     }
   }
-
-  print(colors1);
 }
 
 /*------------------------------------------------------------------*/
