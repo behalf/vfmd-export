@@ -24,6 +24,8 @@ var x, y;
 var margin;
 var availableRegionWidth, availableRegionHeight;
 
+var preloadedStringInput, fontSizeInput, lineHeightInput, updateButton;
+
 var charsA = "abcdefghijklmnopqrstuvwxyz0123456789";
 var charsB = "áăắặằẳẵâấậầẩẫạàảãđéêếệềểễẹèẻẽíịìỉĩóôốộồổỗọòỏơớợờởỡõúụùủưứựừửữũýỵỳỷỹ";
 var charsC = ".,:;…!?·#/*(){}[]-–—_**$%&@";
@@ -32,11 +34,7 @@ var charAvailable1 = "abcdefghijklmnopqrstuvwxyz0123456789áăắặằẳẵâ�
 var charAvailable2 = "abcdefghijklmnopqrstuvwxyz0123456789áăắặằẳẵâấậầẩẫạàảãđéêếệềểễẹèẻẽíịìỉĩóôốộồổỗọòỏơớợờởỡõúụùủưứựừửữũýỵỳỷỹ:?·-&";
 var charAvailable3 = "abcdefghijklmnopqrstuvwxyz0123456789áăắặằẳẵâấậầẩẫạàảãđéêếệềểễẹèẻẽíịìỉĩóôốộồổỗọòỏơớợờởỡõúụùủưứựừửữũýỵỳỷỹ:?·-&";
 
-/************ EDITTTTTTT ***************************/
-
 var preloadedString = "";
-
-/************ EDITTTTTTT ***************************/
 
 /*------------------------------------------------------------------*/
 
@@ -79,29 +77,6 @@ function setup() {
   noStroke();
   blendMode(MULTIPLY);
 
-  initializeText();
-  
-  /* default 
-  textHeight = 180;
-  fontSize = 187;*/
-  /* promo poster 
-  textHeight = 242;
-  fontSize = 210; */
-  /* totebag
-  textHeight = 250;
-  fontSize = 269.5; */
-  /* blue stone */
-  /*textHeight = 178.58;
-  fontSize = 166; */
-
-
-  /************ EDITTTTTTT ***************************/
-
-  textHeight = 242;
-  fontSize = 222;
-    
-  /************ EDITTTTTTT ***************************/
-
   textSize(fontSize);
 
   colors = [
@@ -142,6 +117,28 @@ function setup() {
 
   availableRegionWidth = width - (margin * 2);
   availableRegionHeight = height - (margin * 2);
+
+  // input
+  preloadedStringInput = createInput("HANOI");
+  preloadedStringInput.position(margin, windowHeight - margin);
+
+  fontSizeInput = createInput("100");
+  fontSizeInput.position(preloadedStringInput.x + preloadedStringInput.width + 50, preloadedStringInput.y);
+
+  lineHeightInput = createInput("120");
+  fontSizeInput.position(fontSizeInput.x + fontSizeInput.width + 50, preloadedStringInput.y);
+
+  updateButton = createButton("UPDATE");
+  updateButton.position(lineHeightInput.x + lineHeightInput.width + 50, preloadedStringInput.y);
+  updateButton.mousePressed(update);
+}
+
+function update() {
+  initializeText();
+
+  preloadedString = preloadedStringInput.value();
+  fontSize = fontSizeInput.value();
+  textHeight = lineHeightInput.value();
 
   preloadString(preloadedString);
 }
