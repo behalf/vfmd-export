@@ -159,7 +159,7 @@ function drawCharacter(_font, _char, _x, _y) {
 }
 
 function draw() {
-  fill(0);
+  fill(random(255));
   rect(100, 100, 100, 100);
   var currentLetter = 0;
 
