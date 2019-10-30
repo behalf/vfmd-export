@@ -79,8 +79,6 @@ function setup() {
   noStroke();
   blendMode(MULTIPLY);
 
-  textSize(fontSize);
-
   colors = [
              [
                "#86A840", // light green
@@ -135,6 +133,8 @@ function update() {
   preloadedString = preloadedStringInput.value();
   fontSize = float(fontSizeInput.value());
   textHeight = float(lineHeightInput.value());
+  
+  textSize(fontSize);
 
   startX = margin;
   startY = margin + fontSize * 0.72;
