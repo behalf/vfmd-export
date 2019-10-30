@@ -177,7 +177,7 @@ function draw() {
   rect(100, 100, 100, 100);
 
     // draw a baseline
-    stroke(0);
+    stroke(255,0,0);
     // line(startX, y, windowWidth - startX, y);
     rect(startX, y, availableRegionWidth, 0);
     noStroke();
