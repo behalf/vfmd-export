@@ -162,9 +162,6 @@ function drawCharacter(_font, _char, _x, _y) {
 function draw() {
   var currentLetter = 0;
 
-  print(fontSize);
-  print(textHeight);
-
   // draw letters
   for (var line = 0; line < lineCount(); line++) {
     var currentLine1 = textTyped1[line];
@@ -174,6 +171,8 @@ function draw() {
     // line coordinate
     x = startX;
     y = startY + (textHeight * line);
+
+    print(x + " " + y);
 
     // draw a baseline
     stroke(255,0,0);
