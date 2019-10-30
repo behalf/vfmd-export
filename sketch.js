@@ -126,7 +126,7 @@ function setup() {
   fontSizeInput.position(preloadedStringInput.x + preloadedStringInput.width, preloadedStringInput.y);
 
   lineHeightInput = createInput("120");
-  fontSizeInput.position(fontSizeInput.x + fontSizeInput.width, preloadedStringInput.y);
+  lineHeightInput.position(fontSizeInput.x + fontSizeInput.width, preloadedStringInput.y);
 
   updateButton = createButton("UPDATE");
   updateButton.position(lineHeightInput.x + lineHeightInput.width, preloadedStringInput.y);
