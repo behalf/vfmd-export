@@ -117,8 +117,8 @@ function setup() {
   startX = margin;
   startY = margin + fontSize * 0.72;
 
-  availableRegionWidth = width - (margin * 2);
-  availableRegionHeight = height - (margin * 2);
+  availableRegionWidth = windowWidth - (margin * 2);
+  availableRegionHeight = windowHeight - (margin * 2);
 
   // input
   preloadedStringInput = createInput("hanoi");
