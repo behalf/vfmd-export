@@ -141,6 +141,8 @@ function update() {
   textHeight = lineHeightInput.value();
 
   preloadString(preloadedString);
+
+  redraw();
 }
 
 function lineCount() {
